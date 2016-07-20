@@ -1,0 +1,15 @@
+<ol>
+<?php foreach ($this->getItems() as $_item): ?>
+    <li>
+        <?php if ($_item->getCount() > 0): ?>
+        <label>
+            <input type="checkbox" name="<?php echo $_item->getFilter()->getRequestVar()?>"
+                   value="<?php echo $_item->getValue() ?>"> <?php echo $_item->getLabel() ?>
+            <?php if ($this->shouldDisplayProductCount()): ?>
+                (<?php echo $_item->getCount() ?>)
+            <?php endif; ?>
+        </label>
+        <?php endif; ?>
+    </li>
+<?php endforeach ?>
+</ol>

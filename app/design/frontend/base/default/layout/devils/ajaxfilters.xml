@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <catalog_category_layered>
+        <remove name="catalog.leftnav" />
+        <reference name="left">
+            <block type="devils_ajaxfilters/layer_view" name="devils_ajaxfilters.leftnav" after="currency"
+                   template="devils/ajaxfilters/layer/view.phtml"/>
+        </reference>
+    </catalog_category_layered>
+</layout>
